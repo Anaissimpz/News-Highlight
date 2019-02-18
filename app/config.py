@@ -2,8 +2,7 @@ class Config:
     '''
     General configuration parent class
     '''
-     MOVIE_API_KEY ='https://newsapi.org/v2/sources?apiKey=fa11784a75904050b3ff499bf5b0ca1e'
-    
+    SOURCE_API_BASE_URL='https://newsapi.org/v2/sources?category={}&apiKey={}'
 
 class ProdConfig(Config):
     '''

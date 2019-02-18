@@ -9,6 +9,33 @@
         {% endif %}
     </head>
     <body>
-
+<h1> Categories</h1>
+ <!-- Popular movie section  -->
+ <h3> General</h3>
+ <ul>
+    {% for source in general %}
+        <li>{{ source.name}}</li>
+    {% endfor %}
+</ul>
+<!-- Upcoming movie  -->
+<h3> Business</h3>
+<ul>
+   {% for source in business %}
+       <li>{{ source.name}}</li>
+   {% endfor %}
+</ul>
+<!-- Now showing movie -->
+<h3>Technology</h3>
+<ul>
+    {% for source in technology %}
+    <li>{{ source.name}}</li>
+{% endfor %}
+</ul>
+<h3>Sports</h3>
+<ul>
+    {% for source in sports %}
+    <li>{{ source.name}}</li>
+{% endfor %}
+</ul>
     </body>
 </html>

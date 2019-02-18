@@ -1,43 +1,29 @@
 from flask import render_template
 from app import app
-
-# Views
+from .request import get_source
+#Views
 @app.route('/')
 def index():
-
     '''
     View root page function that returns the index page and its data
     '''
-    return render_template('index.html')
-    # Views
-@app.route('/')
-def index():
+    general_category= get_source('general')
+    sport_category= get_source('sports')
+    business_category = get_source('business')
+    entertainement_category = get_source('entertainment')
+    technology_category = get_source('technology')
+    message = 'Welcome to our website'
+    title = 'NEWS'
+# Getting popular news
+    return render_template('index.html', title = title, general = general_category, sports = sport_category, business =  business_category, entertainment = entertainement_category,technology =  technology_category  )
+@app.route('/source/<source_name>')
+def source(source_name):
+    '''
+    view source page function that returns the nsource details page and its data.
+    '''
+    return render_template('source.html',id=source_name)
 
-    '''
-    View root page function that returns the index page and its data
-    '''
 
-    message = 'Hello World'
-    return render_template('index.html',message = message)
-@app.route('/movie/<movie_id>')
-def movie(movie_id):
 
-    '''
-    View movie page function that returns the movie details page and its data
-    '''
-    return render_template('movie.html',id = movie_id)
-@app.route('/movie/<int:movie_id>')
-def movie(movie_id):
 
-    '''
-    View movie page function that returns the movie details page and its data
-    '''
-    return render_template('movie.html',id = movie_id)
-def index():
 
-    '''
-    View root page function that returns the index page and its data
-    '''
-
-    title = 'Home - Welcome to The best Movie Review Website Online'
-    return render_template('index.html', title = title)        
