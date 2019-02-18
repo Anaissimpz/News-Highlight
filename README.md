@@ -30,7 +30,6 @@ News Highlight is a web application that is meant to catch up hard workers on cu
 * Tel:+250788582184
 * Email: rwjpyy@gmail.com
 # License
-
 MIT License
-
 Copyright (c) 2019 UMUTESIWASE Yvette
+
