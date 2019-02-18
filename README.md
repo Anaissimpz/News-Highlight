@@ -7,7 +7,6 @@ News Highlight is a web application that is meant to catch up hard workers on cu
 # Specifications
 | Behavior |Input | Output |
 | :---:   | :-: | :-:      |
-
 | View Business sources | Click on the BUSINESS button | Scrolls the page to the BUSINESS section |
 | :---:   | :-: | :-:      |
 | View Entertainment sources|Click on the ENTERTAINMENT button	 | button	Scrolls the page to the ENTERTAINMENT section |
