@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from .request import get_source
+from .request import get_source,get_articles
 #Views
 @app.route('/')
 def index():
@@ -21,7 +21,8 @@ def source(source_name):
     '''
     view source page function that returns the nsource details page and its data.
     '''
-    return render_template('source.html',id=source_name)
+    articles=get_articles(source_name)
+    return render_template('source.html',id=source_name,articles=articles)
 
 
 
