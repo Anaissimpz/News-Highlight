@@ -1,41 +1,84 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title> Welcome to the best News Highlight website </title>
-        {% endif %}
-    </head>
-    <body>
-<h1> Categories</h1>
- <!-- Popular movie section  -->
- <h3> General</h3>
- <ul>
-    {% for source in general %}
-        <li>{{ source.name}}</li>
-    {% endfor %}
-</ul>
-<!-- Upcoming movie  -->
-<h3> Business</h3>
-<ul>
-   {% for source in business %}
-       <li>{{ source.name}}</li>
-   {% endfor %}
-</ul>
-<!-- Now showing movie -->
-<h3>Technology</h3>
-<ul>
-    {% for source in technology %}
-    <li>{{ source.name}}</li>
-{% endfor %}
-</ul>
-<h3>Sports</h3>
-<ul>
-    {% for source in sports %}
-    <li>{{ source.name}}</li>
-{% endfor %}
-</ul>
-    </body>
-</html>
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+<!-- Styles Block -->
+{% block styles %}
+    {{ super() }}
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
+<!-- Content Block -->
+{% block content %}
+<div class="navbar navbar-light" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" style="padding-left:30%">
+                <li><a href="#general">General</a></li>
+                <li><a href="#business">Business</a></li>
+                <li><a href="#sport">Sports</a></li>
+                <li><a href="#entertainment">Entertainment</a></li>
+                <li><a href="#technology">Technology</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<main class="container-fluid">
+    <div class="page_name"> 
+        <h1><img src="static/images/logo.jpg" alt="" width="150px" height="75px"> | News Highlights</h1> 
+    </div>
+    <!-- General Sources section  -->
+    <hr />
+    <div class="source_section">
+        <h3 id="general" class="source_section_name">General News</h3>
+        <ul>
+            <div class="row">
+        	   {{ macro.displaySourcesList(general) }}
+            </div>
+        </ul>
+    </div>
+ <!-- Business Sources section  -->
+    <hr />
+    <div class="source_section">
+        <h3 id="business" class="source_section_name">Business News</h3>
+        <ul>
+            <div class="row">
+               {{ macro.displaySourcesList(business) }}
+            </div>
+        </ul>
+    </div>
+    <!-- Sport Sources section  -->
+    <hr />
+    <div class="source_section">
+        <h3 id="sport" class="source_section_name">Sports News</h3>
+        <ul>
+            <div class="row">
+               {{ macro.displaySourcesList(sport) }}
+            </div>
+        </ul>
+    </div>
+    <!-- Entertainment Sources section  -->
+    <hr />
+    <div class="source_section">
+        <h3 id="entertainment" class="source_section_name">Entertainment News</h3>
+        <ul>
+            <div class="row">
+               {{ macro.displaySourcesList(entertainment) }}
+            </div>
+        </ul>
+    </div>
+    <!-- Technology Sources section  -->
+    <hr />
+    <div class="source_section">
+        <h3 id="technology" class="source_section_name">Technology News</h3>
+        <ul>
+            <div class="row">
+               {{ macro.displaySourcesList(technology) }}
+            </div>
+        </ul>
+    </div>
+ 
+</main>
+<footer>
+    <h4>Done by Yvette</h4>
+</footer>
+{% endblock %}
+
