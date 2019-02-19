@@ -1,17 +1,21 @@
-h1, h2, h3 {
+h1, h3, {
     font-family: sans-serif;
     padding: 20px;
     text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    font-size: 70px;
+    word-wrap: break-word;
+    color: white
 }
 
 li{
-    list-style-type: none;
+    list-style-type: center;
+    text-align: center;
+    padding: 20px;
 }
 
 .text-center{
     text-align: center;
 }
 
-.container-img{
-    width: 100%;
-}
