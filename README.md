@@ -28,7 +28,7 @@ News Highlight is a web application that is meant to catch up hard workers on cu
 * Bootstrap
 * JavaScript
 # Link
-click on this link:https://git.heroku.com/newshighlight2.git
+click on this link: https://newshighlight2.herokuapp.com/
 # contact details
 * Tel:+250788582184
 * Email: rwjpyy@gmail.com
