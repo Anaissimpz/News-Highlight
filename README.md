@@ -20,8 +20,8 @@ News Highlight is a web application that is meant to catch up hard workers on cu
 # Set-up and Installation
 *  Clone the Repo
 * Install python 3.6
-* Run chmod a+x start.py
-* Run ./start.py
+* Run chmod a+x run.py
+* Run ./run.py
 # Technologies used
 * Python 3.6
 * HTML
